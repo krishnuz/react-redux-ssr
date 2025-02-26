@@ -1,3 +1,4 @@
+import { fetchArticles } from "./actions/articles";
 import Articles from "./components/pages/Articles";
 import Home from "./components/pages/Home";
 
@@ -9,6 +10,7 @@ const routes = [
   {
     path: "/articles",
     element: Articles,
+    loadData: store => store.dispatch(fetchArticles()),
   },
 ];
 
